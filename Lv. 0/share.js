@@ -21,5 +21,3 @@ console.log(addNumber);
 addNumber = solution(7, 2);
 console.log(addNumber);
 
-
-
