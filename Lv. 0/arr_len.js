@@ -22,20 +22,20 @@
 //      }
 // }
 
-// 비슷한 코드 답
-function solution(strlist){
-    var answer = [];
-    for(let i = 0; i < strlist.length; i++){
-        answer.push(strlist[i].length);
-    }
-    return answer;
-}
-
-
-// // map 함수 사용하기!
+// // 비슷한 코드 답
 // function solution(strlist){
-//     return strlist.map((a) => a.length);
+//     var answer = [];
+//     for(let i = 0; i < strlist.length; i++){
+//         answer.push(strlist[i].length);
+//     }
+//     return answer;
 // }
+
+
+// map 함수 사용하기!
+function solution(strlist){
+    return strlist.map((a) => a.length);
+}
 
 
 console.log(solution(["We", "are", "the", "world!"]));
