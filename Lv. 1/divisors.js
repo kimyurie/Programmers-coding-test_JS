@@ -14,3 +14,8 @@
 
 // 입출력 예 #2
 // 5의 약수는 1, 5입니다. 이를 모두 더하면 6입니다.
+
+function solution(n) {
+    var answer = 0;
+    return answer;
+}
