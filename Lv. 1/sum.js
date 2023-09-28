@@ -12,25 +12,27 @@
 
 function solution(n)
 {  
-    // n 배열로 만들기 (정수 -> 정수 배열로)
-    // 1. 정수 -> 문자열(유사배열객체)로 변경
-    var a = String(n);
-    // 2. 배열 모든 요소 숫자로 변경
-   var b = (arg) => Number(arg); // 입력받은 파라미터(arg)를 숫자로 변경하여 리턴
-    // 3. 문자열 -> 숫자 배열로 변경
-    // 문자열 -> 배열 변경 : Array.from()
-    var newArr = Array.from(a, b);
+//     // n 배열로 만들기 (정수 -> 정수 배열로)
+//     // 1. 정수 -> 문자열(유사배열객체)로 변경
+//     var a = String(n);
+//     // 2. 배열 모든 요소 숫자로 변경
+//    var b = (arg) => Number(arg); // 입력받은 파라미터(arg)를 숫자로 변경하여 리턴
+//     // 3. 문자열 -> 숫자 배열로 변경
+//     // 문자열 -> 배열 변경 : Array.from()
+//     var newArr = Array.from(a, b);
 
-    var answer = 0;
-    for (let i = 0; i < newArr.length; i++){
-        answer += newArr[i];
-    }  
-    return answer;
-
-
+//     var answer = 0;
+//     for (let i = 0; i < newArr.length; i++){
+//         answer += newArr[i];
+//     }  
+//     return answer;
     
-    // 몰랐던 부분
-    // 정수-> 정수 배열로 만드는 것
+//     // 몰랐던 부분
+//     // 정수-> 정수 배열로 만드는 것
+
+
+    const answer = String(n).split('').reduce((acc,val)=>acc+Number(val),0)
+   return answer
 }
 
 console.log(solution(123))
