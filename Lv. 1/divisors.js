@@ -17,5 +17,16 @@
 
 function solution(n) {
     var answer = 0;
-    return answer;
+
+    // 약수 요소들의 공통점 = 12를 요소로 나누면 0이 된다. 
+   for (let i = 1; i <= n; i++){
+    if(n % i == 0){
+        answer += i;
+    }
+   }
+
+   return answer;
 }
+
+console.log(solution(12));
+console.log(solution(5));

@@ -30,7 +30,6 @@ function solution(n)
 //     // 몰랐던 부분
 //     // 정수-> 정수 배열로 만드는 것
 
-
     const answer = String(n).split('').reduce((acc,val)=>acc+Number(val),0)
    return answer
 }
