@@ -9,13 +9,16 @@
 // n	return
 // 12345	[5,4,3,2,1]
 function solution(n) {
-    const answer = String(n).split('').map(Number); // [ 1, 2, 3, 4, 5 ]
-    // i -> 5 - i - 1 = 4-i
-    var arr = [];
-    for(let i = 0; i < answer.length; i++){
-        arr.push(answer[answer.length - i - 1]);
-    }
-    return arr;
+    // const answer = String(n).split('').map(Number); // [ 1, 2, 3, 4, 5 ]
+    // // i -> 5 - i - 1 = 4-i
+    // var arr = [];
+    // for(let i = 0; i < answer.length; i++){
+    //     arr.push(answer[answer.length - i - 1]);
+    // }
+    // return arr;
+
+    const answer = String(n).split('').map(Number).reverse();
+    return answer;
 }
 
 console.log(solution(12345));
