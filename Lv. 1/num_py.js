@@ -13,7 +13,11 @@
 // "Pyy"	    false
 
 function solution(s){
-  
+  const sLength = s.length;
+  const pCnt = sLength - s.replace(/p/gi,'').length; // p개수 = 전체 문자 개수 - p를 공백으로 바꾸고 난 후 남은 문자의 개수
+  const yCnt = sLength - s.replace(/y/gi, '').length; // y개수
+
+  return pCnt - yCnt === 0 
 }
 
 console.log(solution("pPoooyY"))
