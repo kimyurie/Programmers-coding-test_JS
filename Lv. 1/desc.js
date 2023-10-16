@@ -11,7 +11,7 @@
 function solution(n) {
     // 1. 정수 => 문자열 변경 2. map 함수로 요소 숫자로 바꿈 3. 숫자 정렬 4. 역순 정렬 5 배열 요소 합치기
     // join 메서드 : 배열의 모든 요소 연결해 하나의 문자열로 만듬
-    const answer = String(n).split('').map(Number).sort().reverse().join('');
+    const answer = Number(n.toString().split('').sort().reverse().join(''))
     return answer;
 }
 
