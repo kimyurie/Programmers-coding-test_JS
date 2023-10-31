@@ -12,13 +12,21 @@
 // 배열 arr의 크기 : 1,000,000 이하의 자연수
 // 배열 arr의 원소의 크기 : 0보다 크거나 같고 9보다 작거나 같은 정수
 // 입출력 예
-// arr	answer
+// arr	              answer
 // [1,1,3,3,0,1,1]	[1,3,0,1]
-// [4,4,4,3,3]	[4,3]
+// [4,4,4,3,3]	       [4,3]
 
 function solution(arr)
 {
-    var answer = [];   
+// arr 인덱스 바로 뒤에 나오는 숫자가 앞의 숫자와 비교
+    var answer = [];
+    // 처음 들어왔던 1과 다음 들어온 1 비교하는 법?
+    answer.push(arr[0]);
+    for(let i = 0; i < arr.length - 1; i++){ 
+       if(arr[i] != arr[i+1] ) {
+        answer.push(arr[i+1])
+       }
+    }
     return answer;
 }
 
